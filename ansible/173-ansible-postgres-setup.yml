@@ -1,0 +1,11 @@
+- hosts: all
+  become: true
+  tasks:
+    - apt:
+        name: postgresql
+        state: present
+        update_cache: true
+    - service:
+        name: postgresql
+        state: started
+        enabled: true

@@ -1,0 +1,9 @@
+- hosts: homelab
+  become: true
+  tasks:
+    - apt:
+        name: [git, curl, vim, htop]
+        update_cache: true
+        state: present
+    - debug:
+        msg: "Continue with Docker, K3s, Argo CD, monitoring, Jenkins."

@@ -1,0 +1,10 @@
+- hosts: all
+  become: true
+  vars:
+    devops_user: devops
+  tasks:
+    - user:
+        name: "{{ devops_user }}"
+        groups: sudo
+        append: true
+        shell: /bin/bash

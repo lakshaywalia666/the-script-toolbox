@@ -1,0 +1,14 @@
+.env
+*.log
+*.tmp
+*.bak
+backup/
+backups/
+dist/
+node_modules/
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+__pycache__/
+*.pyc
+.DS_Store

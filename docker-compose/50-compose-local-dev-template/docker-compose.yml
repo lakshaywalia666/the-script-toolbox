@@ -1,0 +1,11 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    ports: ["5432:5432"]
+    environment:
+      POSTGRES_DB: devdb
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]

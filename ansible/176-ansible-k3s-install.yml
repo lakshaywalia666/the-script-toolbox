@@ -1,0 +1,6 @@
+- hosts: k3s
+  become: true
+  tasks:
+    - shell: curl -sfL https://get.k3s.io | sh -
+      args:
+        creates: /usr/local/bin/k3s

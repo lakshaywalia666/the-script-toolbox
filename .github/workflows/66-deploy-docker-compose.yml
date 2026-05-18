@@ -1,0 +1,10 @@
+name: Deploy Docker Compose
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Copy compose files
+        run: echo "Add rsync/scp deployment here"

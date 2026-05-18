@@ -1,0 +1,9 @@
+- hosts: all
+  become: true
+  tasks:
+    - apt:
+        name: [ca-certificates, curl, gnupg]
+        update_cache: true
+    - shell: curl -fsSL https://get.docker.com | sh
+      args:
+        creates: /usr/bin/docker

@@ -1,0 +1,10 @@
+name: Security Scan
+on: [push, pull_request]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Secret grep
+        run: |
+          ! grep -RInE 'password|secret|api_key|token' . --exclude-dir=.git

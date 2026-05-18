@@ -1,0 +1,9 @@
+- hosts: app
+  become: true
+  tasks:
+    - copy:
+        src: docker-compose.yml
+        dest: /opt/app/docker-compose.yml
+    - shell: docker compose up -d
+      args:
+        chdir: /opt/app

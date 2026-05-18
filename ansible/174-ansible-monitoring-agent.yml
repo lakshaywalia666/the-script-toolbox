@@ -1,0 +1,5 @@
+- hosts: all
+  become: true
+  tasks:
+    - debug:
+        msg: "Install node_exporter here or call scripts/monitoring/107-install-node-exporter.sh"
